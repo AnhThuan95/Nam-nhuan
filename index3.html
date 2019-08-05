@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nam nhuan</title>
+</head>
+<body>
+
+<script>
+
+    let year = parseInt(prompt("Nhap vao nam can kiem tra: "));
+    let isLeapYear = false;
+    let isDivisibleBy4 = year % 4 == 0;
+    let isDivisibleBy100 = year % 100 == 0;
+    let isDivisibleBy400 = year % 400 == 0;
+
+    if (isDivisibleBy4){
+        if (isDivisibleBy100){
+            if (isDivisibleBy400){
+                isLeapYear = true;
+            }
+        } else {
+            isLeapYear = true;
+        }
+    }
+
+    if (isLeapYear){
+        alert("Nam " + year + " la nam nhuan!");
+    } else {
+        alert("Nam " + year + " khong phai la nam nhuan!");
+    }
+
+</script>
+
+</body>
+</html>
